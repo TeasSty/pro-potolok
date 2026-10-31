@@ -1,40 +1,70 @@
-import { IconArrowCircle } from './IconArrow'
+import { useEffect, useState } from 'react'
 import './Header.css'
 
-const NAV = [
-  { href: '#solutions', label: 'Решения' },
-  { href: '#projects', label: 'Проекты' },
-  { href: '#designers', label: 'Дизайнерам' },
-  { href: '#about', label: 'О компании' },
-  { href: '#contacts', label: 'Контакты' },
+const LINKS = [
+  { href: '#work', label: 'Работы' },
+  { href: '#systems', label: 'Системы' },
+  { href: '#order', label: 'Заказ' },
 ]
 
 export function Header() {
+  const [open, setOpen] = useState(false)
+  const [on, setOn] = useState(false)
+
+  useEffect(() => {
+    const tick = () => setOn(window.scrollY > 40)
+    tick()
+    window.addEventListener('scroll', tick, { passive: true })
+    return () => window.removeEventListener('scroll', tick)
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
   return (
-    <header className="site-header">
-      <div className="container site-header__inner">
-        <a className="logo" href="#top" aria-label="ПРО Потолок">
-          <span className="logo__pro">PRO</span>
-          <span className="logo__name">потолок</span>
+    <header className={`hd${on || open ? ' is-on' : ''}`}>
+      <div className="shell hd__row">
+        <a className="hd__logo" href="#top" aria-label="PRO Потолок">
+          PRO<span>потолок</span>
         </a>
 
-        <nav className="site-nav" aria-label="Основная навигация">
-          {NAV.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
+        <nav className="hd__nav" aria-label="Навигация">
+          {LINKS.map((l) => (
+            <a key={l.href} href={l.href}>
+              {l.label}
             </a>
           ))}
         </nav>
 
-        <div className="site-header__actions">
-          <a className="site-header__phone" href="tel:+79115011202">
-            +7 (911) 501-12-02
+        <a className="hd__tel" href="tel:+79115011202">
+          +7 (911) 501-12-02
+        </a>
+
+        <button
+          className={`hd__menu${open ? ' is-open' : ''}`}
+          type="button"
+          aria-label={open ? 'Закрыть' : 'Меню'}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <i />
+          <i />
+        </button>
+      </div>
+
+      <div className={`hd__drawer${open ? ' is-open' : ''}`}>
+        {LINKS.map((l) => (
+          <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            {l.label}
           </a>
-          <a className="btn btn--pill btn--light" href="#request">
-            <span>Заявка</span>
-            <IconArrowCircle />
-          </a>
-        </div>
+        ))}
+        <a href="tel:+79115011202" onClick={() => setOpen(false)}>
+          Позвонить
+        </a>
       </div>
     </header>
   )

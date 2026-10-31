@@ -21,7 +21,7 @@ export function IconArrow({ className }: { className?: string }) {
 
 export function IconArrowCircle({ className }: { className?: string }) {
   return (
-    <span className={className ?? 'icon-arrow-circle'}>
+    <span className={className ?? 'icon-arrow'}>
       <IconArrow />
     </span>
   )

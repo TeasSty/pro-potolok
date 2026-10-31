@@ -1,21 +1,20 @@
-import { Audience } from './components/Audience'
+import { Contact } from './components/Contact'
 import { Header } from './components/Header'
-import { Hero } from './components/Hero'
-import { Projects } from './components/Projects'
-import { Solutions } from './components/Solutions'
-import { Technologies } from './components/Technologies'
+import { Stage } from './components/Stage'
+import { Story } from './components/Story'
+import { Work } from './components/Work'
+import './styles/site.css'
 
 export default function App() {
   return (
     <>
       <Header />
       <main>
-        <Hero />
-        <Solutions />
-        <Projects />
-        <Technologies />
-        <Audience />
+        <Stage />
+        <Work />
+        <Story />
       </main>
+      <Contact />
     </>
   )
 }
