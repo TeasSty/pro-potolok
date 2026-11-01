@@ -7,17 +7,25 @@ export function Story() {
   return (
     <section className="story" id="systems" aria-labelledby="story-title">
       <div className="shell story__spread">
+        <figure className="story__node">
+          <img
+            src={NODE}
+            alt="Теневой зазор, трек и спот на плоскости потолка"
+            width={720}
+            height={1280}
+            loading="lazy"
+          />
+        </figure>
+
         <div className="story__manifesto">
-          <p className="story__kicker">Система</p>
           <h2 className="story__title" id="story-title">
             Профиль держит свет.
             <em>Полотно — плоскость.</em>
           </h2>
           <p className="story__body">
             Теневой зазор, трек, парящий контур — узлы, из которых собирается
-            потолок. Материал и свет читаются сами, без декора ради декора.
+            потолок. Свет и материал читаются сами.
           </p>
-          <hr className="light-cut story__cut" />
           <dl className="story__facts">
             <div>
               <dt>Вологда</dt>
@@ -29,17 +37,6 @@ export function Story() {
             </div>
           </dl>
         </div>
-
-        <figure className="story__node">
-          <img
-            src={NODE}
-            alt="Теневой зазор, трек и спот на плоскости потолка"
-            width={1080}
-            height={1440}
-            loading="lazy"
-          />
-          <figcaption>Узел профиля</figcaption>
-        </figure>
       </div>
     </section>
   )

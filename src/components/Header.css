@@ -16,10 +16,12 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 28px;
 }
 
 .hd__logo {
+  margin-right: auto;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -38,7 +40,6 @@
 }
 
 .hd__nav {
-  margin-left: auto;
   display: flex;
   gap: 28px;
 }
@@ -66,7 +67,6 @@
   display: none;
   width: 44px;
   height: 44px;
-  margin-left: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;

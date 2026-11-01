@@ -5,33 +5,21 @@
 }
 
 .work__open {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 24px 48px;
-  margin-bottom: clamp(28px, 5vh, 48px);
-}
-
-.work__title {
-  margin: 0;
-  font-family: var(--font);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
+  margin-bottom: clamp(32px, 5vh, 56px);
 }
 
 .work__aside {
   margin: 0;
-  max-width: 34ch;
+  max-width: 28ch;
+  margin-inline-start: auto;
   font-family: var(--font-display);
-  font-size: clamp(18px, 2.2vw, 24px);
+  font-size: clamp(20px, 2.4vw, 28px);
   font-weight: 400;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.32;
   color: var(--ink-dim);
   text-wrap: pretty;
+  text-align: right;
 }
 
 .work__essay {
@@ -156,10 +144,10 @@
 }
 
 @media (max-width: 900px) {
-  .work__open {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  .work__aside {
+    margin-inline-start: 0;
+    text-align: left;
+    max-width: 34ch;
   }
 
   .work__split {

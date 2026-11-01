@@ -3,12 +3,10 @@
   --ink: #f3f1eb;
   --ink-dim: rgba(243, 241, 235, 0.58);
   --ink-mute: rgba(243, 241, 235, 0.34);
-  --teal: #28565a;
-  --teal-deep: #1a3c40;
   --paper: #e7e3da;
   --paper-ink: #141414;
   --paper-dim: rgba(20, 20, 20, 0.55);
-  --line: rgba(40, 86, 90, 0.4);
+  --line: rgba(243, 241, 235, 0.18);
   --grade: contrast(1.04) saturate(0.92) brightness(1.02);
   --font-display: 'Spectral', 'Times New Roman', serif;
   --font: 'Onest', system-ui, sans-serif;
@@ -64,8 +62,8 @@ button {
 .light-cut {
   display: block;
   height: 1px;
-  width: min(96px, 24vw);
-  background: linear-gradient(90deg, var(--teal), transparent);
+  width: min(88px, 22vw);
+  background: linear-gradient(90deg, rgba(243, 241, 235, 0.55), transparent);
   border: 0;
   margin: 0;
 }

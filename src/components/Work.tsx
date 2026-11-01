@@ -17,11 +17,8 @@ const FRAMES = {
 
 export function Work() {
   return (
-    <section className="work" id="work" aria-labelledby="work-title">
+    <section className="work" id="work" aria-label="Объекты">
       <div className="shell work__open">
-        <h2 className="work__title" id="work-title">
-          Объекты
-        </h2>
         <p className="work__aside">
           Своды, парящие контуры, теневые примыкания и трек — кадры с объектов
           в Вологде.

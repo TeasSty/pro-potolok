@@ -10,8 +10,8 @@ export function Stage() {
           className="reveal"
           src={HERO}
           alt=""
-          width={1080}
-          height={1440}
+          width={720}
+          height={1280}
           fetchPriority="high"
         />
         <div className="stage__scrim" />
@@ -22,11 +22,7 @@ export function Stage() {
           <p className="stage__brand rise">
             PRO<span>потолок</span>
           </p>
-          <h1 className="stage__title rise rise-d1">
-            Свет собирает
-            <br />
-            пространство
-          </h1>
+          <h1 className="stage__title rise rise-d1">Свет собирает пространство</h1>
           <p className="stage__lead rise rise-d2">
             Натяжные потолки и профильные системы · Вологда · с&nbsp;2009
           </p>
