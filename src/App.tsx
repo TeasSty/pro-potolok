@@ -1,8 +1,10 @@
+import { Construction } from './components/Construction'
 import { Contact } from './components/Contact'
+import { Directions } from './components/Directions'
 import { Header } from './components/Header'
-import { Stage } from './components/Stage'
-import { Story } from './components/Story'
-import { Work } from './components/Work'
+import { Hero } from './components/Hero'
+import { Systems } from './components/Systems'
+import { Works } from './components/Works'
 import './styles/site.css'
 
 export default function App() {
@@ -10,9 +12,11 @@ export default function App() {
     <>
       <Header />
       <main>
-        <Stage />
-        <Work />
-        <Story />
+        <Hero />
+        <Systems />
+        <Works />
+        <Construction />
+        <Directions />
       </main>
       <Contact />
     </>
