@@ -3,8 +3,8 @@ import './Header.css'
 
 const LINKS = [
   { href: '#work', label: 'Работы' },
-  { href: '#systems', label: 'Системы' },
-  { href: '#order', label: 'Заказ' },
+  { href: '#systems', label: 'Система' },
+  { href: '#order', label: 'Связь' },
 ]
 
 export function Header() {
@@ -63,7 +63,7 @@ export function Header() {
           </a>
         ))}
         <a href="tel:+79115011202" onClick={() => setOpen(false)}>
-          Позвонить
+          +7 (911) 501-12-02
         </a>
       </div>
     </header>

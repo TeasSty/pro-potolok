@@ -1,16 +1,15 @@
-/* Shared CTAs */
+/* Quiet text CTAs — no teal pills, no circle-arrow marks */
 
 .cta {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-height: 44px;
   font-family: var(--font);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  transition-property: opacity, background-color, color, border-color, transform;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition-property: opacity, color, border-color, transform;
   transition-duration: 180ms;
   transition-timing-function: ease-out;
 }
@@ -20,90 +19,66 @@
 }
 
 .cta:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
-.cta--pill {
-  padding: 14px 22px;
-  background: var(--ink);
-  color: var(--void);
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 14px;
-  font-weight: 700;
+.cta--line {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(243, 241, 235, 0.4);
 }
 
-.cta--pill:hover {
-  opacity: 1;
-  background: #fff;
-}
-
-.cta--teal {
-  background: var(--teal);
-  color: #fff;
-}
-
-.cta--teal:hover {
-  background: var(--teal-deep);
-  opacity: 1;
-}
-
-.cta--ghost {
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(242, 240, 234, 0.35);
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 0;
-}
-
-.cta--ghost:hover {
+.cta--line:hover {
   opacity: 1;
   border-bottom-color: currentColor;
 }
 
-.mark {
-  display: inline-flex;
-  width: 28px;
-  height: 28px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  flex-shrink: 0;
+.cta--ink {
+  border-bottom-color: rgba(20, 20, 20, 0.28);
+  color: var(--paper-ink);
 }
 
-.mark svg {
-  display: block;
+.cta--ink:hover {
+  border-bottom-color: currentColor;
 }
 
-/* Soft entrance for key blocks */
 @keyframes rise-in {
   from {
     opacity: 0;
-    transform: translateY(18px);
-    filter: blur(4px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
 .rise {
-  animation: rise-in 0.85s var(--ease) both;
+  animation: rise-in 0.9s var(--ease) both;
 }
 
 .rise-d1 {
-  animation-delay: 0.12s;
+  animation-delay: 0.1s;
 }
 
 .rise-d2 {
-  animation-delay: 0.24s;
+  animation-delay: 0.2s;
 }
 
 .rise-d3 {
-  animation-delay: 0.36s;
+  animation-delay: 0.32s;
+}
+
+@keyframes reveal-frame {
+  from {
+    opacity: 0;
+    clip-path: inset(4% 4% 4% 4%);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+  }
+}
+
+.reveal {
+  animation: reveal-frame 1.1s var(--ease) both;
 }

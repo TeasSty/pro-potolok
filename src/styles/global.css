@@ -1,18 +1,20 @@
 :root {
-  --void: #070808;
-  --ink: #f2f0ea;
-  --ink-dim: rgba(242, 240, 234, 0.62);
-  --ink-mute: rgba(242, 240, 234, 0.38);
+  --void: #0a0b0b;
+  --ink: #f3f1eb;
+  --ink-dim: rgba(243, 241, 235, 0.58);
+  --ink-mute: rgba(243, 241, 235, 0.34);
   --teal: #28565a;
   --teal-deep: #1a3c40;
-  --paper: #ebe8e1;
-  --paper-ink: #121212;
-  --paper-dim: rgba(18, 18, 18, 0.58);
-  --line: rgba(40, 86, 90, 0.45);
-  --font: 'Manrope', 'Golos Text', system-ui, sans-serif;
-  --font-body: 'Golos Text', 'Manrope', system-ui, sans-serif;
+  --paper: #e7e3da;
+  --paper-ink: #141414;
+  --paper-dim: rgba(20, 20, 20, 0.55);
+  --line: rgba(40, 86, 90, 0.4);
+  --grade: contrast(1.04) saturate(0.92) brightness(1.02);
+  --font-display: 'Spectral', 'Times New Roman', serif;
+  --font: 'Onest', system-ui, sans-serif;
+  --font-body: 'Onest', system-ui, sans-serif;
   --pad: clamp(18px, 3.5vw, 48px);
-  --header: 72px;
+  --header: 68px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -39,8 +41,6 @@ body {
 img {
   display: block;
   max-width: 100%;
-  outline: 1px solid rgba(255, 255, 255, 0.08);
-  outline-offset: -1px;
 }
 
 a {
@@ -64,7 +64,7 @@ button {
 .light-cut {
   display: block;
   height: 1px;
-  width: min(120px, 28vw);
+  width: min(96px, 24vw);
   background: linear-gradient(90deg, var(--teal), transparent);
   border: 0;
   margin: 0;
