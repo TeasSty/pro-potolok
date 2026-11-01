@@ -5,7 +5,7 @@ Stock photos saved locally under `public/images/`. Unsplash License (commercial 
 
 | File | Role | Source URL | Notes |
 |---|---|---|---|
-| `hero-interior.jpg` | Hero full-bleed | https://images.unsplash.com/photo-1600210492486-724fe5c67fb0 | Modern living / architectural light mood |
+| `hero-interior.jpg` | Hero full-bleed | https://images.unsplash.com/photo-1600607687939-ce8a6c25118c | Modern living / architectural light mood |
 | `sys-shadow.jpg` | Systems 01 | https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea | Interior architecture mood |
 | `sys-lines.jpg` | Systems 02 | https://images.unsplash.com/photo-1558618666-fcd25c85cd64 | Ceiling light detail |
 | `sys-float.jpg` | Systems 03 | https://images.unsplash.com/photo-1600585152220-90363fe7e115 | Interior ceiling plane |
