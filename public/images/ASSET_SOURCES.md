@@ -13,6 +13,7 @@ Stock photos saved locally under `public/images/`. Unsplash License (commercial 
 | `dir-private.jpg` | Directions — private | https://images.unsplash.com/photo-1600210492493-0946911123ea | Cozy living warm light |
 | `dir-design.jpg` | Directions — designers | https://images.unsplash.com/photo-1503387762-592deb58ef4e | Architectural drawings |
 | `final-detail.jpg` | Final CTA atmosphere | https://images.unsplash.com/photo-1615876234886-fd9a39fda97f | Interior detail blur |
+| `construct-node-3d.jpg` | Construction cutaway viz | Generated (Cursor GenerateImage) | Conceptual typical shadow-gap + LED node — not a product datasheet |
 
 ## Works (real company only)
 

@@ -29,17 +29,92 @@
 }
 
 .construct__stage {
-  background: linear-gradient(180deg, #f4f3ee 0%, #e4e2db 100%);
+  background: linear-gradient(180deg, #f7f6f2 0%, #eceae4 100%);
   border-radius: 18px;
   border: 1px solid rgba(23, 26, 25, 0.06);
-  padding: clamp(16px, 3vw, 36px);
+  padding: clamp(12px, 2.4vw, 28px);
   overflow: hidden;
 }
 
-.construct__svg {
+.construct__viz {
+  margin: 0;
+}
+
+.construct__frame {
+  position: relative;
+  width: 100%;
+  isolation: isolate;
+}
+
+.construct__img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  outline: 1px solid rgba(23, 26, 25, 0.08);
+  outline-offset: -1px;
+  background: #f3f2ed;
+}
+
+.construct__lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.construct__line {
+  fill: none;
+  stroke: rgba(23, 26, 25, 0.5);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.construct__anchor {
+  fill: var(--ink);
+  stroke: #f7f6f2;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.construct__callouts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.construct__callout {
+  position: absolute;
+  z-index: 2;
+  left: var(--lx);
+  top: var(--ly);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.construct__label {
+  display: inline-block;
+  font-size: clamp(12px, 1.15vw, 14px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  background: rgba(247, 246, 242, 0.92);
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.construct__note {
+  margin: 14px 4px 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  opacity: 0.85;
+  text-wrap: pretty;
 }
 
 .construct__legend {
@@ -73,8 +148,61 @@
     grid-template-columns: 1fr;
   }
 
-  .construct__callouts text {
-    font-size: 16px;
+  .construct__stage {
+    padding: 10px;
+  }
+
+  .construct__lines {
+    display: none;
+  }
+
+  .construct__callouts {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .construct__callout {
+    position: static;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .construct__label {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 12px;
+    background: rgba(23, 26, 25, 0.04);
+    white-space: normal;
+  }
+
+  .construct__callout--profile .construct__label::before,
+  .construct__callout--led .construct__label::before,
+  .construct__callout--canvas .construct__label::before,
+  .construct__callout--gap .construct__label::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: 1px;
+    background: var(--ink);
+  }
+
+  .construct__callout--led .construct__label::before {
+    background: #d4a84b;
+  }
+
+  .construct__callout--gap .construct__label::before {
+    background: #171a19;
+  }
+
+  .construct__note {
+    margin-top: 12px;
   }
 
   .construct__legend {
@@ -84,5 +212,11 @@
 
   .construct__legend li:not(:last-child)::after {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .construct__callouts {
+    grid-template-columns: 1fr;
   }
 }
